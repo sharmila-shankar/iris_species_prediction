@@ -1,0 +1,36 @@
+{% load static %}
+
+<html>
+    <head>
+        <title>Iris Species Prediction</title>
+        <link rel="stylesheet" type="text/css" href="{% static 'style.css' %}">
+    </head>
+
+<body>
+    <div class="login-box">
+        <h1>IRIS SPECIES PREDICTOR<br></h1><h2>Using Decision Tree Classifier</h2>
+        <form action="calculate">
+            <div class="user-box">
+                <input type="text" name="sl" value="{{sl}}" required="">
+                <label>Sepal Length</label>
+            </div>
+            <div class="user-box">
+                <input type="text" name="sw" value="{{sw}}" required="">
+                <label>Sepal Width</label>
+            </div>
+            <div class="user-box">
+                <input type="text" name="pl" value="{{pl}}" required="">
+                <label>Petal Length</label>
+            </div>
+            <div class="user-box">
+                <input type="text" name="pw" value="{{pw}}" required="">
+                <label>Petal Width</label>
+            </div>
+        <div class="form_submit">
+            <input type="submit" name="submit" value="PREDICT" class="submitbtn" />
+        </div>
+        </form><br>
+        <h2>The flower is : {{predicted}}</h2>
+    </div>
+</body>
+</html>
